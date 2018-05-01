@@ -1,0 +1,83 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Weight Converter</title>
+    <style type="text/css">
+    	body{
+			margin-top: 100px;
+			background: linear-gradient(120deg, #262626, #4d4d4d) fixed;
+			color: #fff;
+		}
+		.page-footer{
+			background: #fff;
+			position: absolute;
+			bottom: 0;
+		}
+		.footer-copyright{
+			padding: 8px;
+		}
+    </style>
+  </head>
+  
+  <body>
+  	<div class="container-fluid">
+  		<div class="row">
+  			<div class="col-md-6 offset-md-3">
+  				<h1 class= "display-4 text-center mb-5">Weight Converter</h1>
+  				<form>
+  					<div class="form-group">
+  						<input type="number" class="form-control form-control-lg" placeholder="Enter Kilograms" id="kginput">
+  					</div>
+  				</form>
+  				<div id="output">
+  					<div class="card bg-success mb-2">
+  						<div class="card-body">
+  							<h4>Grams: </h4>
+  							<div id="g-output"></div>
+  						</div>
+  					</div>
+  					<div class="card bg-primary mb-2">
+  						<div class="card-body">
+  							<h4>Pounds: </h4>
+  							<div id="p-output"></div>
+  						</div>
+  					</div>
+  					<div class="card bg-danger mb-2">
+  						<div class="card-body">
+  							<h4 class="">Ounces: </h4>
+  							<div id="o-output"></div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>	
+  		</div>
+  	</div>
+  	
+  	<div class="page-footer container-fluid">
+	
+  <footer class="row text-center">	
+		    <div class="footer-copyright col-md-12">
+		        <span style="color: #333">Coded by</span> 
+		        <a href="https://kunsebastian.github.io/portfolio/"> Kunle Badeafuye </a> <span style="color: #333">© 2018 </span> 
+		    </div>
+	</footer>
+	</div>
+    		
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    	document.getElementById('output').style.visibility = 'hidden';
+    	document.getElementById('kginput').addEventListener('input',function(e){
+    		document.getElementById('output').style.visibility = 'visible';
+    		let kg = e.target.value;
+    		document.getElementById('g-output').innerHTML = kg*1000;
+    		document.getElementById('p-output').innerHTML = kg*2.20462;
+    		document.getElementById('o-output').innerHTML = kg*35.274;
+    	});
+    </script>
+  </body>
+</html>
